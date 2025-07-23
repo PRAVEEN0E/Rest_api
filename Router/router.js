@@ -1,6 +1,7 @@
 // router.js
 const express = require('express')
 const router = express.Router()
+const path=require('path')
 router.use(express.json())
 const product = [
   { id: 1, name: "Shoe", price: 500, category: "Footwear" },
