@@ -106,8 +106,9 @@ const product = [
   { id: 99, name: "Hair Brush", price: 200, category: "Personal Care" },
   { id: 100, name: "Track Pants", price: 1100, category: "Apparel" }
 ]
-
-
+router.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 router.get('/product', (req, res) => {
   res.json({ data:{product:product}  })
   
