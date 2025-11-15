@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Routes</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+      font-family: "Poppins", sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .wrapper {
+      max-width: 800px;
+      width: 100%;
+      animation: fadeIn 0.8s ease;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 15px;
+      padding: 25px 30px;
+      margin-bottom: 28px;
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+
+      transition: 0.28s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 35px rgba(0,0,0,0.6);
+    }
+
+    h2 {
+      margin: 0 0 15px;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .route {
+      margin: 8px 0;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .method {
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+      min-width: 70px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .GET { background: #007bff; }
+    .POST { background: #28a745; }
+    .PUT { background: #ffc107; color: #000; }
+    .DELETE { background: #dc3545; }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <h1>Smart Inventory API Routes</h1>
+
+    <!-- GET -->
+    <div class="card">
+      <h2>🔵 GET Routes</h2>
+
+      <div class="route"><span class="method GET">GET</span> /product</div>
+      <div class="route"><span class="method GET">GET</span> /product?category=value</div>
+      <div class="route"><span class="method GET">GET</span> /product?lp=value</div>
+      <div class="route"><span class="method GET">GET</span> /product/:id</div>
+    </div>
+
+    <!-- POST -->
+    <div class="card">
+      <h2>🟢 POST Route</h2>
+
+      <div class="route"><span class="method POST">POST</span> /product</div>
+      <div style="margin-left: 85px; opacity: 0.85;">Body: { name, category, price }</div>
+    </div>
+
+    <!-- PUT -->
+    <div class="card">
+      <h2>🟡 PUT Route</h2>
+
+      <div class="route"><span class="method PUT">PUT</span> /product/:id</div>
+      <div style="margin-left: 85px; opacity: 0.85;">Body: { name, price, category }</div>
+    </div>
+
+    <!-- DELETE -->
+    <div class="card">
+      <h2>🔴 DELETE Route</h2>
+
+      <div class="route"><span class="method DELETE">DELETE</span> /product/:id</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
